@@ -124,7 +124,7 @@ public class BoardDrawing extends JPanel {
 
             //draw player position
             for (int pl = 0; pl < bs.maxPlayers; pl++) {
-                if (bs.players.get(pl).getPosition() == cellnos[i]) {                         
+                if (bs.players.get(pl).getPosition() == cellnos[i]) {
                     changePlayerColor(g2d, pl, cell, cellWidth, cellHeight);
                 }
             }
@@ -174,7 +174,7 @@ public class BoardDrawing extends JPanel {
 
     private void changePlayerColor(Graphics2D g2d, int pl, Rectangle cell, int cellWidth, int cellHeight) {
         //only one player considered here
-        
+
         g2d.setColor(bs.players.get(pl).getPlayerColor());        //change to player color
         g2d.fillRect(cell.getLocation().x + pl * cellWidth / 4, cell.getLocation().y, cellWidth / 4, cellHeight / 4);//change to player position
         g2d.setColor(Color.blue);
